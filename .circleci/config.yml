@@ -1,0 +1,33 @@
+version: 2.1
+
+working_dir: &working-dir
+  working_directory: ~/spoqa/eslint-config-spoqa
+
+node: &node
+  <<: *working-dir
+  executor:
+    name: node/default
+    tag: "12.14"
+
+orbs:
+  node: circleci/node@1.1
+
+jobs:
+  test:
+    <<: *node
+    steps:
+      - checkout
+      - node/with-cache: &install-deps
+          cache-key: yarn.lock
+          cache-version: v1
+          steps:
+            - run: yarn
+      - run:
+          name: Lint
+          command: yarn lint
+
+workflows:
+  version: 2
+  commonn:
+    jobs:
+      - test

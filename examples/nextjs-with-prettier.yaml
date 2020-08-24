@@ -1,0 +1,54 @@
+env:
+  browser: true
+  es6: true
+  node: true
+parserOptions:
+  project: tsconfig.json
+extends:
+  - "@spoqa/eslint-config-spoqa/react"
+  - "@spoqa/eslint-config-spoqa/recommended"
+  - "@spoqa/eslint-config-spoqa/next"
+  - prettier
+  - "prettier/@typescript-eslint"
+  - prettier/react
+rules:
+  # Path group 설정으로 import order 커스터마이징
+  import/order:
+    - error
+    - groups:
+        - builtin
+        - external
+        - internal
+        - parent
+        - sibling
+        - index
+      pathGroups:
+        - pattern: "{interfaces,utils}/**"
+          group: internal
+          position: before
+        - pattern: "dumb/**"
+          group: internal
+          position: before
+        - pattern: "components/**"
+          group: internal
+          position: before
+        - pattern: "contents/**"
+          group: internal
+          position: before
+        - pattern: "public/**"
+          group: index
+          position: after
+        - pattern: "public/styles/**"
+          group: index
+          position: after
+        - pattern: "./*.{scss,css}"
+          group: index
+          position: after
+      alphabetize:
+        order: asc
+settings:
+  # 절대경로 import 설정
+  import/resolver:
+    node:
+      paths:
+        - .

@@ -1,0 +1,40 @@
+{
+  "name": "@spoqa/eslint-config-spoqa",
+  "version": "1.0.3",
+  "description": "Spoqa Javascript Style Guide",
+  "main": "recommended.js",
+  "files": [
+    "recommended.js",
+    "react.js",
+    "next.js"
+  ],
+  "repository": "https://github.com/spoqa/eslint-config-spoqa",
+  "author": "Spoqa Programmers <dev@spoqa.com>",
+  "scripts": {
+    "lint": "yarn prettier --check **/*.js"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "eslint": "^5.16.0 || ^6.8.0",
+    "eslint-config-react-app": ">= 5.0",
+    "eslint-plugin-flowtype": "3.x",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "1.x",
+    "typescript": ">= 3.0"
+  },
+  "devDependencies": {
+    "husky": "^4.0.1",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

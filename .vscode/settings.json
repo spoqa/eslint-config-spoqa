@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "node_modules/": true
+  },
+  "npm.packageManager": "yarn",
+  "prettier.packageManager": "yarn"
+}
