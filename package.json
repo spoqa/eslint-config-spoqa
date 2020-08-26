@@ -1,6 +1,6 @@
 {
   "name": "@spoqa/eslint-config-spoqa",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Spoqa Javascript Style Guide",
   "main": "recommended.js",
   "files": [
