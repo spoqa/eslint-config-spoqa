@@ -1,6 +1,6 @@
 {
   "name": "@spoqa/eslint-config-spoqa",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Spoqa Javascript Style Guide",
   "main": "recommended.js",
   "files": [
@@ -15,8 +15,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
     "eslint-config-react-app": "^7.0.1",
